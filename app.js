@@ -28,6 +28,24 @@ window.tools = (function(){
         return true;
     };
 
+    var _getNameSpaceReference = function(namespace){
+        var reference = window;
+
+        subNames = namespace
+                    .split(/\.|\[|\]/g)
+                    .filter(function(key){return key.length > 0});
+
+        subNames.forEach(function(name){
+            reference = reference[name];
+
+            if(!reference){
+                throw 'Could not find namespace: ' + namespace;
+            }
+        });
+
+        return reference;
+    };
+
     var _searchSubTree = function(parentObj, query, currentLevel, path, validateKeyFn){
         var level = currentLevel;
 
@@ -60,7 +78,7 @@ window.tools = (function(){
         quitFlag = false;
         result = 'Not found';
         validateKeyFn = validateKeyFn || _validateKey;
-        _searchSubTree(window[topLevelObjKey], query, 0, topLevelObjKey, validateKeyFn)
+        _searchSubTree(_getNameSpaceReference   [topLevelObjKey], query, 0, topLevelObjKey, validateKeyFn)
         console.log(result);
     };
 
