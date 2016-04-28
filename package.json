@@ -1,0 +1,28 @@
+{
+  "name": "browser-console-tools",
+  "version": "1.0.0",
+  "description": "Some useful tools for the browser console.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mchateloin/browser-console-tools.git"
+  },
+  "keywords": [
+    "browser",
+    "console",
+    "chrome",
+    "extension"
+  ],
+  "author": "Miguel A. Chateloin <miguel@chateloin.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mchateloin/browser-console-tools/issues"
+  },
+  "homepage": "https://github.com/mchateloin/browser-console-tools#readme",
+  "dependencies": {
+    "locate-chrome": "0.1.1"
+  }
+}
