@@ -82,6 +82,10 @@ window.tools = (function(){
         console.log(result);
     };
 
+    api.querySelectorAll = function(query){
+        return [].slice.call(document.querySelectorAll(query));
+    };
+
     return api;
 
 }());
