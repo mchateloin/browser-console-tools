@@ -63,8 +63,6 @@ window.tools = (function(){
                 childPath = path + '[' + childKey + ']';
             }
 
-            if(childPath === 'Healthbook.editPersonalInfoView') debugger;
-
             if(query === childKey){
                 result = childPath;
                 return true;
